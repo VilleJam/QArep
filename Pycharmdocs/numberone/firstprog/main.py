@@ -1,16 +1,20 @@
-# This is a sample Python script.
+per_cent = {'TKB': 5.6, 'SKB': 5.9, 'VTB': 4.28, 'SBER': 4.0}
+money = float(input())
+banks = list(per_cent.keys())
+i = int(len(banks))
+deposit = []
+k=0
+while k<i:
+    deposit.append(money+money/100*per_cent[banks[k]])
+    k = k+1
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    if k==i:
+        break
+
+print (deposit)
+
+deposit.sort()
+j=int(len(deposit))
+print(deposit[j-1])
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
